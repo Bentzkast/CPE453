@@ -18,16 +18,11 @@ void launchLS(int fd[2])
    execl("/bin/ls","ls",NULL);
 }
 
-void launchSort(pid_t pid, int fd[2])
+void launchSort(int fd[2])
 {
    /* sort */
    int fileD;
-   int status;
    close(fd[WRITE]);
-   if((pid = waitpid(pid, &status, 0)) < 0)
-   {
-      perror(NULL);
-   }
    fileD = open("outfile",O_WRONLY | O_CREAT | O_TRUNC, 0666);
    if(fileD == -1)
    {
@@ -42,6 +37,7 @@ int main (int argc, char *argv[])
 {
    pid_t pid;
    int fd[2];
+   int status;
 
    /* check & make pipe */
    if(pipe(fd) == -1)
@@ -49,7 +45,7 @@ int main (int argc, char *argv[])
       perror(NULL);
       exit(EXIT_FAILURE);
    }
-   /* main fork */ 
+   /* first fork for ls*/ 
    pid = fork();
    if(pid == 0)
    {
@@ -62,7 +58,26 @@ int main (int argc, char *argv[])
    }
    else 
    {
-      launchSort(pid, fd);
+      /* second child for sort */
+      pid = fork();
+      if(pid == 0)
+      {
+         launchSort(fd);
+      }
+      else if(pid < 0)
+      {
+         perror(NULL);
+         exit(EXIT_FAILURE);
+      }
+      else
+      {
+         close(fd[WRITE]);
+         close(fd[READ]);
+         if((pid = waitpid(pid, &status, 0)) < 0)
+         {
+            perror(NULL);
+         }
+      }
    }
    return EXIT_SUCCESS;
 }
