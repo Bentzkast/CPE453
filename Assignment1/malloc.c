@@ -51,7 +51,8 @@ Header* allocateSpace(Header* last,size_t sizeReq)
    size_t totalSize = sizeReq + sizeof(Header);
    size_t sizeAllocated;
    
-   (totalSize > BASE_SIZE) ? (sizeAllocated = totalSize) : (sizeAllocated = BASE_SIZE);
+   (totalSize > BASE_SIZE) ? (sizeAllocated = totalSize) : 
+      (sizeAllocated = BASE_SIZE);
 
    temp = sbrk(sizeAllocated);
    /* error sbrk */
