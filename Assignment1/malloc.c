@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#define DEBUG_MALLOC
 #define BASE_SIZE 64000
 
 typedef struct Chunk
@@ -12,6 +13,26 @@ typedef struct Chunk
 }Header;
 
 Header* head = NULL;
+
+/* find any mergeable chunk */
+void merge()
+{
+   Header *temp = head;
+   while(temp && temp->next)
+   {
+      if(temp->free && temp->next->free)
+      {
+         temp->size += temp->next->size + sizeof(Header);
+         temp->spaceEnd = temp->next->spaceEnd;
+         temp->next = temp->next->next;
+         temp->free = 1;
+      }
+      else
+      {
+         temp = temp->next;
+      }
+   }
+}
 
 /* split the chunks into two with it own header
  * the inputed dont need to take acount of old header 
@@ -149,36 +170,78 @@ void* calloc(size_t nmemb, size_t size)
    size_t totalSize = nmemb * size;
    void * tmp = malloc(totalSize);
    memset(tmp, 0, totalSize);
-   return calloc;
+   return tmp;
+}
+
+Header* findBlock(Header **last,void *ptr)
+{
+   Header *temp = head;
+   intptr_t adr = (intptr_t)ptr;
+   while(temp && (adr > temp->spaceEnd))
+   {
+      *last = temp;
+      temp = temp->next;
+   }
+   return temp;
 }
 
 void free(void *ptr)
 {
    Header *toBeFree;
+   Header *last;
    if(!ptr)
    {
       return;
    }
-   toBeFree = (Header*)ptr - 1;
-
+   toBeFree = findBlock(&last,ptr);
    toBeFree->free = 1; 
+   merge(); 
 }
 
 void *realloc(void *ptr, size_t size)
 {
    Header *toBeRe;
+   Header *last;
    void * new;
 
    if(ptr == NULL)
    {
       return malloc(size);
    }
-      
-   toBeRe = (Header*)ptr - 1;
+   if(size == 0)
+   {
+      free(ptr);
+      return NULL;
+   }
+   toBeRe = findBlock(&last,ptr);
+   if(toBeRe == NULL)
+   {
+      return NULL;
+   }
+   /* smaller Chunk */
    if(toBeRe->size >= size)
    {
-      return (split(toBeRe,size) + 1);
+      new = (void*)(split(toBeRe,size) + 1);
+
+      return new;
    }
+   /* if we can eat nearby chunk */
+   else
+   {  
+      if(toBeRe->next && toBeRe->next->free)
+      {
+         toBeRe->size += toBeRe->next->size + sizeof(Header);
+         toBeRe->spaceEnd = toBeRe->next->spaceEnd;
+         toBeRe->next = toBeRe->next->next;
+         toBeRe->free = 0;
+      }
+      if(toBeRe->size >= size)
+      {
+         new = (void*)(split(toBeRe,size) + 1);
+         return new;
+      }
+   }
+   /* forced to make new colony */
    new = malloc(size);
    if(new == NULL)
    { 
