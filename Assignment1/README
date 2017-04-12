@@ -1,4 +1,7 @@
 Joseph Alfredo(Jalfredo)
-still not sure what shoud make clean do
-memset and memcpy error handling
-MALLOC_DEBUG 
+
+Some concern:
+- memset and memcpy error handling
+- calloc input wrap around(too big value for unsigned size_t
+- not sure on default MAKE behavior
+

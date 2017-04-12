@@ -1,6 +1,6 @@
 CC = gcc
 CCFLAGS = -Wall -g -fPIC
-all: lib/malloc.so 
+all: lib64/libmalloc.so 
 
 intel-all: lib/libmalloc.so lib64/libmalloc.so
 
@@ -23,4 +23,4 @@ lib64:
 	mkdir -p lib64
 
 clean:
-	rm -f malloc.o *~  
+	rm -f *.o *~  

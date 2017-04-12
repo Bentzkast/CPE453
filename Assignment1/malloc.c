@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#define DEBUG_MALLOC
+#include <stdio.h>
 #define BASE_SIZE 64000
 
 typedef struct Chunk
@@ -117,7 +117,10 @@ Header* searchFree(size_t sizeNeeded)
 void* malloc(size_t size)
 {
    Header* current;
-
+   int originalSize = size;
+   char buffer[100];
+   int print = 0;
+   
    if(size <=0)
    {
       return NULL;
@@ -162,14 +165,37 @@ void* malloc(size_t size)
          }
       }
    }
+   /* debug malloc env variable */
+   if(getenv("DEBUG_MALLOC"))
+   {
+      print = snprintf(buffer,100,"MALLOC: malloc(%d) => (ptr=%p, size%d)\n"
+         ,originalSize,(void*)(current+1),(int)size);
+      if(write(STDERR_FILENO, buffer, print) == -1)
+      {
+         exit(EXIT_FAILURE);
+      }
+   }
    return (void*)(current + 1);
 }
 
 void* calloc(size_t nmemb, size_t size)
 {
+   /* not sure if this could wrap around or not */
    size_t totalSize = nmemb * size;
    void * tmp = malloc(totalSize);
    memset(tmp, 0, totalSize);
+   /* debug malloc env variable */
+   if(getenv("DEBUG_MALLOC"))
+   {
+      char buffer[100];
+      int print = 0;
+      print = snprintf(buffer,100,"MALLOC: calloc(%d,%d) => (ptr=%p, size%d)\n"
+         ,(int)nmemb,(int)size,tmp,(int)(((Header*)tmp -1)->size));
+      if(write(STDERR_FILENO, buffer, print) == -1)
+      {
+         exit(EXIT_FAILURE);
+      }
+   }
    return tmp;
 }
 
@@ -196,13 +222,42 @@ void free(void *ptr)
    toBeFree = findBlock(&last,ptr);
    toBeFree->free = 1; 
    merge(); 
+   /* debug malloc env variable */
+   if(getenv("DEBUG_MALLOC"))
+   {
+      char buffer[100];
+      int print = 0;
+      print = snprintf(buffer,100,"MALLOC: free(%p)\n"
+         ,toBeFree+1);
+      if(write(STDERR_FILENO, buffer, print) == -1)
+      {
+         exit(EXIT_FAILURE);
+      }
+   }
 }
+
+void debugRealloc(void *oldPtr,int sizeReq,void* newPtr,int newSize)
+{
+   if(getenv("DEBUG_MALLOC"))
+   {
+      char buffer[100];
+      int print = 0;
+      print = snprintf(buffer,100,"MALLOC: realloc(%p,%d) => (ptr=%p,size=%d)\n"
+         ,oldPtr,sizeReq,newPtr,newSize);
+      if(write(STDERR_FILENO, buffer, print) == -1)
+      {
+         exit(EXIT_FAILURE);
+      }
+   }
+}
+
 
 void *realloc(void *ptr, size_t size)
 {
    Header *toBeRe;
    Header *last;
    void * new;
+   int originSize = size;
 
    if(ptr == NULL)
    {
@@ -218,11 +273,16 @@ void *realloc(void *ptr, size_t size)
    {
       return NULL;
    }
+   /* allign the size to modable by 16 */
+   while(size % 16 != 0)
+   {
+      size++;
+   }
    /* smaller Chunk */
    if(toBeRe->size >= size)
    {
       new = (void*)(split(toBeRe,size) + 1);
-
+      debugRealloc(ptr,originSize,new,size);
       return new;
    }
    /* if we can eat nearby chunk */
@@ -238,6 +298,7 @@ void *realloc(void *ptr, size_t size)
       if(toBeRe->size >= size)
       {
          new = (void*)(split(toBeRe,size) + 1);
+         debugRealloc(ptr,originSize,new,size);
          return new;
       }
    }
@@ -249,5 +310,6 @@ void *realloc(void *ptr, size_t size)
    }
    memcpy(new, ptr, toBeRe->size);
    free(ptr);
+   debugRealloc(ptr,originSize,new,size);
    return new;
 }
