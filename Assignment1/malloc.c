@@ -172,6 +172,7 @@ void* malloc(size_t size)
          ,originalSize,(void*)(current+1),(int)size);
       if(write(STDERR_FILENO, buffer, print) == -1)
       {
+         perror(NULL);
          exit(EXIT_FAILURE);
       }
    }
@@ -193,6 +194,7 @@ void* calloc(size_t nmemb, size_t size)
          ,(int)nmemb,(int)size,tmp,(int)(((Header*)tmp -1)->size));
       if(write(STDERR_FILENO, buffer, print) == -1)
       {
+         perror(NULL);
          exit(EXIT_FAILURE);
       }
    }
@@ -231,6 +233,7 @@ void free(void *ptr)
          ,toBeFree+1);
       if(write(STDERR_FILENO, buffer, print) == -1)
       {
+         perror(NULL);
          exit(EXIT_FAILURE);
       }
    }
@@ -246,6 +249,7 @@ void debugRealloc(void *oldPtr,int sizeReq,void* newPtr,int newSize)
          ,oldPtr,sizeReq,newPtr,newSize);
       if(write(STDERR_FILENO, buffer, print) == -1)
       {
+         perror(NULL);
          exit(EXIT_FAILURE);
       }
    }

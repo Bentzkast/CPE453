@@ -1,0 +1,42 @@
+
+
+-----------------
+2) unparitioned, blank:
+     minls /home/pn-cs453/Given/Asgn5/Images/BlankDisk 
+-----------------
+Program exited with bad status: 65280
+
+Test program output:
+Bad magic number. (0x0000)^M
+This doesn't look like a MINIX filesystem.^M
+
+
+-----------------
+3) unpartitioned, files:
+     minls /home/pn-cs453/Given/Asgn5/Images/TestImage 
+-----------------
+Program exited with bad status: 65280
+
+Test program output:
+Bad magic number. (0x0000)^M
+This doesn't look like a MINIX filesystem.^M
+
+
+-----------------
+5) partitioned, part 0:
+     minls -p 0 /home/pn-cs453/Given/Asgn5/Images/Partitioned 
+-----------------
+Program exited with bad status: 65280
+
+Test program output:
+Bad magic number. (0x0000)^M
+This doesn't look like a MINIX filesystem.^M
+
+
+-----------------
+6) partitioned, part 1:
+     minls -p 1 /home/pn-cs453/Given/Asgn5/Images/Partitioned 
+-----------------
+Program exited with bad status: 65280
+
+Test program output:

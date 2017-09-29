@@ -4,4 +4,4 @@ Some concern:
 - memset and memcpy error handling
 - calloc input wrap around(too big value for unsigned size_t
 - not sure on default MAKE behavior
-
+- not sure if perror use malloc, called in write error handling

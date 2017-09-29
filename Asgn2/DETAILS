@@ -1,0 +1,158 @@
+=================================================
+TEST 21: Transfer threads between schedulers (stopped)
+
+Create a number of threads, then set_scheduler() and see if 
+they transfer properly.
+
+
+
+
+
+----------
+Reference:
+----------
+Creating LWPS
+Setting the scheduler.
+Launching LWPS
+    1
+         2
+              3
+                   4
+                        5
+         2
+              3
+                   4
+                        5
+              3
+                   4
+                        5
+                   4
+                        5
+                        5
+Back from LWPS.
+----------
+Submitted:
+----------
+^C
+---------------------------------
+Differences (< reference > output)
+---------------------------------
+
+1,19c1
+< Creating LWPS
+< Setting the scheduler.
+< Launching LWPS
+<     1
+<          2
+<               3
+<                    4
+<                         5
+<          2
+<               3
+<                    4
+<                         5
+<               3
+<                    4
+<                         5
+<                    4
+<                         5
+<                         5
+< Back from LWPS.
+---
+> ^C
+\ No newline at end of file
+---------
+=================================================
+TEST 22: Transfer threads between schedulers (live)
+
+Create a number of threads, start them running,
+then set_scheduler() and see if they transfer properly.
+
+
+
+
+
+----------
+Reference:
+----------
+Creating LWPS
+Launching LWPS
+    1
+         2
+              3
+                   4
+                        5
+    1
+         2
+              3
+                   4
+                        5
+    1
+         2
+              3
+                   4
+                        5
+Setting the scheduler.
+    1
+         2
+              3
+                   4
+                        5
+    1
+         2
+              3
+                   4
+                        5
+    1
+         2
+              3
+                   4
+                        5
+Back from LWPS.
+----------
+Submitted:
+----------
+^C
+---------------------------------
+Differences (< reference > output)
+---------------------------------
+
+1,34c1
+< Creating LWPS
+< Launching LWPS
+<     1
+<          2
+<               3
+<                    4
+<                         5
+<     1
+<          2
+<               3
+<                    4
+<                         5
+<     1
+<          2
+<               3
+<                    4
+<                         5
+< Setting the scheduler.
+<     1
+<          2
+<               3
+<                    4
+<                         5
+<     1
+<          2
+<               3
+<                    4
+<                         5
+<     1
+<          2
+<               3
+<                    4
+<                         5
+< Back from LWPS.
+---
+> ^C
+\ No newline at end of file
+---------

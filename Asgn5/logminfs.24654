@@ -1,0 +1,920 @@
+
+
+-----------------
+30) directories:
+     minls /home/pn-cs453/Given/Asgn5/Images/Files /DeepPaths/a/b/c/d/e/i/j/k/Files/Message 
+-----------------
+Test program output:
+/DeepPaths/a/b/c/d/e/i/j/k/Files/Message:^M
+drwxr-xr-x       192 .^M
+drwxr-xr-x       256 ..^M
+drwxr-xr-x       192 j^M
+Diffs: ( < Reference > Testfile ):
+1c1,4
+< -rw-r--r--        47 /DeepPaths/a/b/c/d/e/i/j/k/Files/Message^M
+---
+> /DeepPaths/a/b/c/d/e/i/j/k/Files/Message:^M
+> drwxr-xr-x       192 .^M
+> drwxr-xr-x       256 ..^M
+> drwxr-xr-x       192 j^M
+
+
+-----------------
+33) indirect directory:
+     minls /home/pn-cs453/Given/Asgn5/Images/BigIndirectDirs Level1/Level2 
+-----------------
+Test program output:
+Level1/Level2:^M
+drwxr-xr-x     49024 .^M
+drwxr-xr-x       192 ..^M
+drwxr-xr-x       128 BigDir^M
+-rw-r--r--         0 file_000^M
+-rw-r--r--         0 file_001^M
+-rw-r--r--         0 file_002^M
+-rw-r--r--         0 file_003^M
+-rw-r--r--         0 file_004^M
+-rw-r--r--         0 file_005^M
+-rw-r--r--         0 file_006^M
+-rw-r--r--         0 file_007^M
+-rw-r--r--         0 file_010^M
+-rw-r--r--         0 file_011^M
+-rw-r--r--         0 file_012^M
+-rw-r--r--         0 file_013^M
+-rw-r--r--         0 file_014^M
+-rw-r--r--         0 file_015^M
+-rw-r--r--         0 file_016^M
+-rw-r--r--         0 file_017^M
+-rw-r--r--         0 file_020^M
+-rw-r--r--         0 file_021^M
+-rw-r--r--         0 file_022^M
+-rw-r--r--         0 file_023^M
+-rw-r--r--         0 file_024^M
+-rw-r--r--         0 file_025^M
+-rw-r--r--         0 file_026^M
+-rw-r--r--         0 file_027^M
+-rw-r--r--         0 file_030^M
+-rw-r--r--         0 file_031^M
+-rw-r--r--         0 file_032^M
+-rw-r--r--         0 file_033^M
+-rw-r--r--         0 file_034^M
+-rw-r--r--         0 file_035^M
+-rw-r--r--         0 file_036^M
+-rw-r--r--         0 file_037^M
+-rw-r--r--         0 file_040^M
+-rw-r--r--         0 file_041^M
+-rw-r--r--         0 file_042^M
+-rw-r--r--         0 file_043^M
+-rw-r--r--         0 file_044^M
+-rw-r--r--         0 file_045^M
+-rw-r--r--         0 file_046^M
+-rw-r--r--         0 file_047^M
+-rw-r--r--         0 file_050^M
+-rw-r--r--         0 file_051^M
+-rw-r--r--         0 file_052^M
+-rw-r--r--         0 file_053^M
+-rw-r--r--         0 file_054^M
+-rw-r--r--         0 file_055^M
+-rw-r--r--         0 file_056^M
+-rw-r--r--         0 file_057^M
+-rw-r--r--         0 file_060^M
+-rw-r--r--         0 file_061^M
+-rw-r--r--         0 file_062^M
+-rw-r--r--         0 file_063^M
+-rw-r--r--         0 file_064^M
+-rw-r--r--         0 file_065^M
+-rw-r--r--         0 file_066^M
+-rw-r--r--         0 file_067^M
+-rw-r--r--         0 file_070^M
+-rw-r--r--         0 file_071^M
+-rw-r--r--         0 file_072^M
+-rw-r--r--         0 file_073^M
+-rw-r--r--         0 file_074^M
+-rw-r--r--         0 file_075^M
+-rw-r--r--         0 file_076^M
+-rw-r--r--         0 file_077^M
+-rw-r--r--         0 file_080^M
+-rw-r--r--         0 file_081^M
+-rw-r--r--         0 file_082^M
+-rw-r--r--         0 file_083^M
+-rw-r--r--         0 file_084^M
+-rw-r--r--         0 file_085^M
+-rw-r--r--         0 file_086^M
+-rw-r--r--         0 file_087^M
+-rw-r--r--         0 file_090^M
+-rw-r--r--         0 file_091^M
+-rw-r--r--         0 file_092^M
+-rw-r--r--         0 file_093^M
+-rw-r--r--         0 file_094^M
+-rw-r--r--         0 file_095^M
+-rw-r--r--         0 file_096^M
+-rw-r--r--         0 file_097^M
+-rw-r--r--         0 file_100^M
+-rw-r--r--         0 file_101^M
+-rw-r--r--         0 file_102^M
+-rw-r--r--         0 file_103^M
+-rw-r--r--         0 file_104^M
+-rw-r--r--         0 file_105^M
+-rw-r--r--         0 file_106^M
+-rw-r--r--         0 file_107^M
+-rw-r--r--         0 file_110^M
+-rw-r--r--         0 file_111^M
+-rw-r--r--         0 file_112^M
+-rw-r--r--         0 file_113^M
+-rw-r--r--         0 file_114^M
+-rw-r--r--         0 file_115^M
+-rw-r--r--         0 file_116^M
+-rw-r--r--         0 file_117^M
+-rw-r--r--         0 file_120^M
+-rw-r--r--         0 file_121^M
+-rw-r--r--         0 file_122^M
+-rw-r--r--         0 file_123^M
+-rw-r--r--         0 file_124^M
+-rw-r--r--         0 file_125^M
+-rw-r--r--         0 file_126^M
+-rw-r--r--         0 file_127^M
+-rw-r--r--         0 file_130^M
+-rw-r--r--         0 file_131^M
+-rw-r--r--         0 file_132^M
+-rw-r--r--         0 file_133^M
+-rw-r--r--         0 file_134^M
+-rw-r--r--         0 file_135^M
+-rw-r--r--         0 file_136^M
+-rw-r--r--         0 file_137^M
+-rw-r--r--         0 file_140^M
+-rw-r--r--         0 file_141^M
+-rw-r--r--         0 file_142^M
+-rw-r--r--         0 file_143^M
+-rw-r--r--         0 file_144^M
+-rw-r--r--         0 file_145^M
+-rw-r--r--         0 file_146^M
+-rw-r--r--         0 file_147^M
+-rw-r--r--         0 file_150^M
+-rw-r--r--         0 file_151^M
+-rw-r--r--         0 file_152^M
+-rw-r--r--         0 file_153^M
+-rw-r--r--         0 file_154^M
+-rw-r--r--         0 file_155^M
+-rw-r--r--         0 file_156^M
+-rw-r--r--         0 file_157^M
+-rw-r--r--         0 file_160^M
+-rw-r--r--         0 file_161^M
+-rw-r--r--         0 file_162^M
+-rw-r--r--         0 file_163^M
+-rw-r--r--         0 file_164^M
+-rw-r--r--         0 file_165^M
+-rw-r--r--         0 file_166^M
+-rw-r--r--         0 file_167^M
+-rw-r--r--         0 file_170^M
+-rw-r--r--         0 file_171^M
+-rw-r--r--         0 file_172^M
+-rw-r--r--         0 file_173^M
+-rw-r--r--         0 file_174^M
+-rw-r--r--         0 file_175^M
+-rw-r--r--         0 file_176^M
+-rw-r--r--         0 file_177^M
+-rw-r--r--         0 file_180^M
+-rw-r--r--         0 file_181^M
+-rw-r--r--         0 file_182^M
+-rw-r--r--         0 file_183^M
+-rw-r--r--         0 file_184^M
+-rw-r--r--         0 file_185^M
+-rw-r--r--         0 file_186^M
+-rw-r--r--         0 file_187^M
+-rw-r--r--         0 file_190^M
+-rw-r--r--         0 file_191^M
+-rw-r--r--         0 file_192^M
+-rw-r--r--         0 file_193^M
+-rw-r--r--         0 file_194^M
+-rw-r--r--         0 file_195^M
+-rw-r--r--         0 file_196^M
+-rw-r--r--         0 file_197^M
+-rw-r--r--         0 file_200^M
+-rw-r--r--         0 file_201^M
+-rw-r--r--         0 file_202^M
+-rw-r--r--         0 file_203^M
+-rw-r--r--         0 file_204^M
+-rw-r--r--         0 file_205^M
+-rw-r--r--         0 file_206^M
+-rw-r--r--         0 file_207^M
+-rw-r--r--         0 file_210^M
+-rw-r--r--         0 file_211^M
+-rw-r--r--         0 file_212^M
+-rw-r--r--         0 file_213^M
+-rw-r--r--         0 file_214^M
+-rw-r--r--         0 file_215^M
+-rw-r--r--         0 file_216^M
+-rw-r--r--         0 file_217^M
+-rw-r--r--         0 file_220^M
+-rw-r--r--         0 file_221^M
+-rw-r--r--         0 file_222^M
+-rw-r--r--         0 file_223^M
+-rw-r--r--         0 file_224^M
+-rw-r--r--         0 file_225^M
+-rw-r--r--         0 file_226^M
+-rw-r--r--         0 file_227^M
+-rw-r--r--         0 file_230^M
+-rw-r--r--         0 file_231^M
+-rw-r--r--         0 file_232^M
+-rw-r--r--         0 file_233^M
+-rw-r--r--         0 file_234^M
+-rw-r--r--         0 file_235^M
+-rw-r--r--         0 file_236^M
+-rw-r--r--         0 file_237^M
+-rw-r--r--         0 file_240^M
+-rw-r--r--         0 file_241^M
+-rw-r--r--         0 file_242^M
+-rw-r--r--         0 file_243^M
+-rw-r--r--         0 file_244^M
+-rw-r--r--         0 file_245^M
+-rw-r--r--         0 file_246^M
+-rw-r--r--         0 file_247^M
+-rw-r--r--         0 file_250^M
+-rw-r--r--         0 file_251^M
+-rw-r--r--         0 file_252^M
+-rw-r--r--         0 file_253^M
+-rw-r--r--         0 file_254^M
+-rw-r--r--         0 file_255^M
+-rw-r--r--         0 file_256^M
+-rw-r--r--         0 file_257^M
+-rw-r--r--         0 file_260^M
+-rw-r--r--         0 file_261^M
+-rw-r--r--         0 file_262^M
+-rw-r--r--         0 file_263^M
+-rw-r--r--         0 file_264^M
+-rw-r--r--         0 file_265^M
+-rw-r--r--         0 file_266^M
+-rw-r--r--         0 file_267^M
+-rw-r--r--         0 file_270^M
+-rw-r--r--         0 file_271^M
+-rw-r--r--         0 file_272^M
+-rw-r--r--         0 file_273^M
+-rw-r--r--         0 file_274^M
+-rw-r--r--         0 file_275^M
+-rw-r--r--         0 file_276^M
+-rw-r--r--         0 file_277^M
+-rw-r--r--         0 file_280^M
+-rw-r--r--         0 file_281^M
+-rw-r--r--         0 file_282^M
+-rw-r--r--         0 file_283^M
+-rw-r--r--         0 file_284^M
+-rw-r--r--         0 file_285^M
+-rw-r--r--         0 file_286^M
+-rw-r--r--         0 file_287^M
+-rw-r--r--         0 file_290^M
+-rw-r--r--         0 file_291^M
+-rw-r--r--         0 file_292^M
+-rw-r--r--         0 file_293^M
+-rw-r--r--         0 file_294^M
+-rw-r--r--         0 file_295^M
+-rw-r--r--         0 file_296^M
+-rw-r--r--         0 file_297^M
+-rw-r--r--         0 file_300^M
+-rw-r--r--         0 file_301^M
+-rw-r--r--         0 file_302^M
+-rw-r--r--         0 file_303^M
+-rw-r--r--         0 file_304^M
+-rw-r--r--         0 file_305^M
+-rw-r--r--         0 file_306^M
+-rw-r--r--         0 file_307^M
+-rw-r--r--         0 file_310^M
+-rw-r--r--         0 file_311^M
+-rw-r--r--         0 file_312^M
+-rw-r--r--         0 file_313^M
+-rw-r--r--         0 file_314^M
+-rw-r--r--         0 file_315^M
+-rw-r--r--         0 file_316^M
+-rw-r--r--         0 file_317^M
+-rw-r--r--         0 file_320^M
+-rw-r--r--         0 file_321^M
+-rw-r--r--         0 file_322^M
+-rw-r--r--         0 file_323^M
+-rw-r--r--         0 file_324^M
+-rw-r--r--         0 file_325^M
+-rw-r--r--         0 file_326^M
+-rw-r--r--         0 file_327^M
+-rw-r--r--         0 file_330^M
+-rw-r--r--         0 file_331^M
+-rw-r--r--         0 file_332^M
+-rw-r--r--         0 file_333^M
+-rw-r--r--         0 file_334^M
+-rw-r--r--         0 file_335^M
+-rw-r--r--         0 file_336^M
+-rw-r--r--         0 file_337^M
+-rw-r--r--         0 file_340^M
+-rw-r--r--         0 file_341^M
+-rw-r--r--         0 file_342^M
+-rw-r--r--         0 file_343^M
+-rw-r--r--         0 file_344^M
+-rw-r--r--         0 file_345^M
+-rw-r--r--         0 file_346^M
+-rw-r--r--         0 file_347^M
+-rw-r--r--         0 file_350^M
+-rw-r--r--         0 file_351^M
+-rw-r--r--         0 file_352^M
+-rw-r--r--         0 file_353^M
+-rw-r--r--         0 file_354^M
+-rw-r--r--         0 file_355^M
+-rw-r--r--         0 file_356^M
+-rw-r--r--         0 file_357^M
+-rw-r--r--         0 file_360^M
+-rw-r--r--         0 file_361^M
+-rw-r--r--         0 file_362^M
+-rw-r--r--         0 file_363^M
+-rw-r--r--         0 file_364^M
+-rw-r--r--         0 file_365^M
+-rw-r--r--         0 file_366^M
+-rw-r--r--         0 file_367^M
+-rw-r--r--         0 file_370^M
+-rw-r--r--         0 file_371^M
+-rw-r--r--         0 file_372^M
+-rw-r--r--         0 file_373^M
+-rw-r--r--         0 file_374^M
+-rw-r--r--         0 file_375^M
+-rw-r--r--         0 file_376^M
+-rw-r--r--         0 file_377^M
+-rw-r--r--         0 file_380^M
+-rw-r--r--         0 file_381^M
+-rw-r--r--         0 file_382^M
+-rw-r--r--         0 file_383^M
+-rw-r--r--         0 file_384^M
+-rw-r--r--         0 file_385^M
+-rw-r--r--         0 file_386^M
+-rw-r--r--         0 file_387^M
+-rw-r--r--         0 file_390^M
+-rw-r--r--         0 file_391^M
+-rw-r--r--         0 file_392^M
+-rw-r--r--         0 file_393^M
+-rw-r--r--         0 file_394^M
+-rw-r--r--         0 file_395^M
+-rw-r--r--         0 file_396^M
+-rw-r--r--         0 file_397^M
+-rw-r--r--         0 file_400^M
+-rw-r--r--         0 file_401^M
+-rw-r--r--         0 file_402^M
+-rw-r--r--         0 file_403^M
+-rw-r--r--         0 file_404^M
+-rw-r--r--         0 file_405^M
+-rw-r--r--         0 file_406^M
+-rw-r--r--         0 file_407^M
+-rw-r--r--         0 file_410^M
+-rw-r--r--         0 file_411^M
+-rw-r--r--         0 file_412^M
+-rw-r--r--         0 file_413^M
+-rw-r--r--         0 file_414^M
+-rw-r--r--         0 file_415^M
+-rw-r--r--         0 file_416^M
+-rw-r--r--         0 file_417^M
+-rw-r--r--         0 file_420^M
+-rw-r--r--         0 file_421^M
+-rw-r--r--         0 file_422^M
+-rw-r--r--         0 file_423^M
+-rw-r--r--         0 file_424^M
+-rw-r--r--         0 file_425^M
+-rw-r--r--         0 file_426^M
+-rw-r--r--         0 file_427^M
+-rw-r--r--         0 file_430^M
+-rw-r--r--         0 file_431^M
+-rw-r--r--         0 file_432^M
+-rw-r--r--         0 file_433^M
+-rw-r--r--         0 file_434^M
+-rw-r--r--         0 file_435^M
+-rw-r--r--         0 file_436^M
+-rw-r--r--         0 file_437^M
+-rw-r--r--         0 file_440^M
+-rw-r--r--         0 file_441^M
+-rw-r--r--         0 file_442^M
+-rw-r--r--         0 file_443^M
+-rw-r--r--         0 file_444^M
+-rw-r--r--         0 file_445^M
+-rw-r--r--         0 file_446^M
+-rw-r--r--         0 file_447^M
+-rw-r--r--         0 file_450^M
+-rw-r--r--         0 file_451^M
+-rw-r--r--         0 file_452^M
+-rw-r--r--         0 file_453^M
+-rw-r--r--         0 file_454^M
+-rw-r--r--         0 file_455^M
+-rw-r--r--         0 file_456^M
+-rw-r--r--         0 file_457^M
+-rw-r--r--         0 file_460^M
+-rw-r--r--         0 file_461^M
+-rw-r--r--         0 file_462^M
+-rw-r--r--         0 file_463^M
+-rw-r--r--         0 file_464^M
+-rw-r--r--         0 file_465^M
+-rw-r--r--         0 file_466^M
+-rw-r--r--         0 file_467^M
+-rw-r--r--         0 file_470^M
+-rw-r--r--         0 file_471^M
+-rw-r--r--         0 file_472^M
+-rw-r--r--         0 file_473^M
+-rw-r--r--         0 file_474^M
+-rw-r--r--         0 file_475^M
+-rw-r--r--         0 file_476^M
+-rw-r--r--         0 file_477^M
+-rw-r--r--         0 file_480^M
+-rw-r--r--         0 file_481^M
+-rw-r--r--         0 file_482^M
+-rw-r--r--         0 file_483^M
+-rw-r--r--         0 file_484^M
+-rw-r--r--         0 file_485^M
+-rw-r--r--         0 file_486^M
+-rw-r--r--         0 file_487^M
+-rw-r--r--         0 file_490^M
+-rw-r--r--         0 file_491^M
+-rw-r--r--         0 file_492^M
+-rw-r--r--         0 file_493^M
+-rw-r--r--         0 file_494^M
+-rw-r--r--         0 file_495^M
+-rw-r--r--         0 file_496^M
+-rw-r--r--         0 file_497^M
+-rw-r--r--         0 file_500^M
+-rw-r--r--         0 file_501^M
+-rw-r--r--         0 file_502^M
+-rw-r--r--         0 file_503^M
+-rw-r--r--         0 file_504^M
+-rw-r--r--         0 file_505^M
+-rw-r--r--         0 file_506^M
+-rw-r--r--         0 file_507^M
+-rw-r--r--         0 file_510^M
+-rw-r--r--         0 file_511^M
+-rw-r--r--         0 file_512^M
+-rw-r--r--         0 file_513^M
+-rw-r--r--         0 file_514^M
+-rw-r--r--         0 file_515^M
+-rw-r--r--         0 file_516^M
+-rw-r--r--         0 file_517^M
+-rw-r--r--         0 file_520^M
+-rw-r--r--         0 file_521^M
+-rw-r--r--         0 file_522^M
+-rw-r--r--         0 file_523^M
+-rw-r--r--         0 file_524^M
+-rw-r--r--         0 file_525^M
+-rw-r--r--         0 file_526^M
+-rw-r--r--         0 file_527^M
+-rw-r--r--         0 file_530^M
+-rw-r--r--         0 file_531^M
+-rw-r--r--         0 file_532^M
+-rw-r--r--         0 file_533^M
+-rw-r--r--         0 file_534^M
+-rw-r--r--         0 file_535^M
+-rw-r--r--         0 file_536^M
+-rw-r--r--         0 file_537^M
+-rw-r--r--         0 file_540^M
+-rw-r--r--         0 file_541^M
+-rw-r--r--         0 file_542^M
+-rw-r--r--         0 file_543^M
+-rw-r--r--         0 file_544^M
+-rw-r--r--         0 file_545^M
+-rw-r--r--         0 file_546^M
+-rw-r--r--         0 file_547^M
+-rw-r--r--         0 file_550^M
+-rw-r--r--         0 file_551^M
+-rw-r--r--         0 file_552^M
+-rw-r--r--         0 file_553^M
+-rw-r--r--         0 file_554^M
+Diffs: ( < Reference > Testfile ):
+450,766d449
+< -rw-r--r--         0 file_555^M
+< -rw-r--r--         0 file_556^M
+< -rw-r--r--         0 file_557^M
+< -rw-r--r--         0 file_560^M
+< -rw-r--r--         0 file_561^M
+< -rw-r--r--         0 file_562^M
+< -rw-r--r--         0 file_563^M
+< -rw-r--r--         0 file_564^M
+< -rw-r--r--         0 file_565^M
+< -rw-r--r--         0 file_566^M
+< -rw-r--r--         0 file_567^M
+< -rw-r--r--         0 file_570^M
+< -rw-r--r--         0 file_571^M
+< -rw-r--r--         0 file_572^M
+< -rw-r--r--         0 file_573^M
+< -rw-r--r--         0 file_574^M
+< -rw-r--r--         0 file_575^M
+< -rw-r--r--         0 file_576^M
+< -rw-r--r--         0 file_577^M
+< -rw-r--r--         0 file_580^M
+< -rw-r--r--         0 file_581^M
+< -rw-r--r--         0 file_582^M
+< -rw-r--r--         0 file_583^M
+< -rw-r--r--         0 file_584^M
+< -rw-r--r--         0 file_585^M
+< -rw-r--r--         0 file_586^M
+< -rw-r--r--         0 file_587^M
+< -rw-r--r--         0 file_590^M
+< -rw-r--r--         0 file_591^M
+< -rw-r--r--         0 file_592^M
+< -rw-r--r--         0 file_593^M
+< -rw-r--r--         0 file_594^M
+< -rw-r--r--         0 file_595^M
+< -rw-r--r--         0 file_596^M
+< -rw-r--r--         0 file_597^M
+< -rw-r--r--         0 file_600^M
+< -rw-r--r--         0 file_601^M
+< -rw-r--r--         0 file_602^M
+< -rw-r--r--         0 file_603^M
+< -rw-r--r--         0 file_604^M
+< -rw-r--r--         0 file_605^M
+< -rw-r--r--         0 file_606^M
+< -rw-r--r--         0 file_607^M
+< -rw-r--r--         0 file_610^M
+< -rw-r--r--         0 file_611^M
+< -rw-r--r--         0 file_612^M
+< -rw-r--r--         0 file_613^M
+< -rw-r--r--         0 file_614^M
+< -rw-r--r--         0 file_615^M
+< -rw-r--r--         0 file_616^M
+< -rw-r--r--         0 file_617^M
+< -rw-r--r--         0 file_620^M
+< -rw-r--r--         0 file_621^M
+< -rw-r--r--         0 file_622^M
+< -rw-r--r--         0 file_623^M
+< -rw-r--r--         0 file_624^M
+< -rw-r--r--         0 file_625^M
+< -rw-r--r--         0 file_626^M
+< -rw-r--r--         0 file_627^M
+< -rw-r--r--         0 file_630^M
+< -rw-r--r--         0 file_631^M
+< -rw-r--r--         0 file_632^M
+< -rw-r--r--         0 file_633^M
+< -rw-r--r--         0 file_634^M
+< -rw-r--r--         0 file_635^M
+< -rw-r--r--         0 file_636^M
+< -rw-r--r--         0 file_637^M
+< -rw-r--r--         0 file_640^M
+< -rw-r--r--         0 file_641^M
+< -rw-r--r--         0 file_642^M
+< -rw-r--r--         0 file_643^M
+< -rw-r--r--         0 file_644^M
+< -rw-r--r--         0 file_645^M
+< -rw-r--r--         0 file_646^M
+< -rw-r--r--         0 file_647^M
+< -rw-r--r--         0 file_650^M
+< -rw-r--r--         0 file_651^M
+< -rw-r--r--         0 file_652^M
+< -rw-r--r--         0 file_653^M
+< -rw-r--r--         0 file_654^M
+< -rw-r--r--         0 file_655^M
+< -rw-r--r--         0 file_656^M
+< -rw-r--r--         0 file_657^M
+< -rw-r--r--         0 file_660^M
+< -rw-r--r--         0 file_661^M
+< -rw-r--r--         0 file_662^M
+< -rw-r--r--         0 file_663^M
+< -rw-r--r--         0 file_664^M
+< -rw-r--r--         0 file_665^M
+< -rw-r--r--         0 file_666^M
+< -rw-r--r--         0 file_667^M
+< -rw-r--r--         0 file_670^M
+< -rw-r--r--         0 file_671^M
+< -rw-r--r--         0 file_672^M
+< -rw-r--r--         0 file_673^M
+< -rw-r--r--         0 file_674^M
+< -rw-r--r--         0 file_675^M
+< -rw-r--r--         0 file_676^M
+< -rw-r--r--         0 file_677^M
+< -rw-r--r--         0 file_680^M
+< -rw-r--r--         0 file_681^M
+< -rw-r--r--         0 file_682^M
+< -rw-r--r--         0 file_683^M
+< -rw-r--r--         0 file_684^M
+< -rw-r--r--         0 file_685^M
+< -rw-r--r--         0 file_686^M
+< -rw-r--r--         0 file_687^M
+< -rw-r--r--         0 file_690^M
+< -rw-r--r--         0 file_691^M
+< -rw-r--r--         0 file_692^M
+< -rw-r--r--         0 file_693^M
+< -rw-r--r--         0 file_694^M
+< -rw-r--r--         0 file_695^M
+< -rw-r--r--         0 file_696^M
+< -rw-r--r--         0 file_697^M
+< -rw-r--r--         0 file_700^M
+< -rw-r--r--         0 file_701^M
+< -rw-r--r--         0 file_702^M
+< -rw-r--r--         0 file_703^M
+< -rw-r--r--         0 file_704^M
+< -rw-r--r--         0 file_705^M
+< -rw-r--r--         0 file_706^M
+< -rw-r--r--         0 file_707^M
+< -rw-r--r--         0 file_710^M
+< -rw-r--r--         0 file_711^M
+< -rw-r--r--         0 file_712^M
+< -rw-r--r--         0 file_713^M
+< -rw-r--r--         0 file_714^M
+< -rw-r--r--         0 file_715^M
+< -rw-r--r--         0 file_716^M
+< -rw-r--r--         0 file_717^M
+< -rw-r--r--         0 file_720^M
+< -rw-r--r--         0 file_721^M
+< -rw-r--r--         0 file_722^M
+< -rw-r--r--         0 file_723^M
+< -rw-r--r--         0 file_724^M
+< -rw-r--r--         0 file_725^M
+< -rw-r--r--         0 file_726^M
+< -rw-r--r--         0 file_727^M
+< -rw-r--r--         0 file_730^M
+< -rw-r--r--         0 file_731^M
+< -rw-r--r--         0 file_732^M
+< -rw-r--r--         0 file_733^M
+< -rw-r--r--         0 file_734^M
+< -rw-r--r--         0 file_735^M
+< -rw-r--r--         0 file_736^M
+< -rw-r--r--         0 file_737^M
+< -rw-r--r--         0 file_740^M
+< -rw-r--r--         0 file_741^M
+< -rw-r--r--         0 file_742^M
+< -rw-r--r--         0 file_743^M
+< -rw-r--r--         0 file_744^M
+< -rw-r--r--         0 file_745^M
+< -rw-r--r--         0 file_746^M
+< -rw-r--r--         0 file_747^M
+< -rw-r--r--         0 file_750^M
+< -rw-r--r--         0 file_751^M
+< -rw-r--r--         0 file_752^M
+< -rw-r--r--         0 file_753^M
+< -rw-r--r--         0 file_754^M
+< -rw-r--r--         0 file_755^M
+< -rw-r--r--         0 file_756^M
+< -rw-r--r--         0 file_757^M
+< -rw-r--r--         0 file_760^M
+< -rw-r--r--         0 file_761^M
+< -rw-r--r--         0 file_762^M
+< -rw-r--r--         0 file_763^M
+< -rw-r--r--         0 file_764^M
+< -rw-r--r--         0 file_765^M
+< -rw-r--r--         0 file_766^M
+< -rw-r--r--         0 file_767^M
+< -rw-r--r--         0 file_770^M
+< -rw-r--r--         0 file_771^M
+< -rw-r--r--         0 file_772^M
+< -rw-r--r--         0 file_773^M
+< -rw-r--r--         0 file_774^M
+< -rw-r--r--         0 file_775^M
+< -rw-r--r--         0 file_776^M
+< -rw-r--r--         0 file_777^M
+< -rw-r--r--         0 file_780^M
+< -rw-r--r--         0 file_781^M
+< -rw-r--r--         0 file_782^M
+< -rw-r--r--         0 file_783^M
+< -rw-r--r--         0 file_784^M
+< -rw-r--r--         0 file_785^M
+< -rw-r--r--         0 file_786^M
+< -rw-r--r--         0 file_787^M
+< -rw-r--r--         0 file_790^M
+< -rw-r--r--         0 file_791^M
+< -rw-r--r--         0 file_792^M
+< -rw-r--r--         0 file_793^M
+< -rw-r--r--         0 file_794^M
+< -rw-r--r--         0 file_795^M
+< -rw-r--r--         0 file_796^M
+< -rw-r--r--         0 file_797^M
+< -rw-r--r--         0 file_800^M
+< -rw-r--r--         0 file_801^M
+< -rw-r--r--         0 file_802^M
+< -rw-r--r--         0 file_803^M
+< -rw-r--r--         0 file_804^M
+< -rw-r--r--         0 file_805^M
+< -rw-r--r--         0 file_806^M
+< -rw-r--r--         0 file_807^M
+< -rw-r--r--         0 file_810^M
+< -rw-r--r--         0 file_811^M
+< -rw-r--r--         0 file_812^M
+< -rw-r--r--         0 file_813^M
+< -rw-r--r--         0 file_814^M
+< -rw-r--r--         0 file_815^M
+< -rw-r--r--         0 file_816^M
+< -rw-r--r--         0 file_817^M
+< -rw-r--r--         0 file_820^M
+< -rw-r--r--         0 file_821^M
+< -rw-r--r--         0 file_822^M
+< -rw-r--r--         0 file_823^M
+< -rw-r--r--         0 file_824^M
+< -rw-r--r--         0 file_825^M
+< -rw-r--r--         0 file_826^M
+< -rw-r--r--         0 file_827^M
+< -rw-r--r--         0 file_830^M
+< -rw-r--r--         0 file_831^M
+< -rw-r--r--         0 file_832^M
+< -rw-r--r--         0 file_833^M
+< -rw-r--r--         0 file_834^M
+< -rw-r--r--         0 file_835^M
+< -rw-r--r--         0 file_836^M
+< -rw-r--r--         0 file_837^M
+< -rw-r--r--         0 file_840^M
+< -rw-r--r--         0 file_841^M
+< -rw-r--r--         0 file_842^M
+< -rw-r--r--         0 file_843^M
+< -rw-r--r--         0 file_844^M
+< -rw-r--r--         0 file_845^M
+< -rw-r--r--         0 file_846^M
+< -rw-r--r--         0 file_847^M
+< -rw-r--r--         0 file_850^M
+< -rw-r--r--         0 file_851^M
+< -rw-r--r--         0 file_852^M
+< -rw-r--r--         0 file_853^M
+< -rw-r--r--         0 file_854^M
+< -rw-r--r--         0 file_855^M
+< -rw-r--r--         0 file_856^M
+< -rw-r--r--         0 file_857^M
+< -rw-r--r--         0 file_860^M
+< -rw-r--r--         0 file_861^M
+< -rw-r--r--         0 file_862^M
+< -rw-r--r--         0 file_863^M
+< -rw-r--r--         0 file_864^M
+< -rw-r--r--         0 file_865^M
+< -rw-r--r--         0 file_866^M
+< -rw-r--r--         0 file_867^M
+< -rw-r--r--         0 file_870^M
+< -rw-r--r--         0 file_871^M
+< -rw-r--r--         0 file_872^M
+< -rw-r--r--         0 file_873^M
+< -rw-r--r--         0 file_874^M
+< -rw-r--r--         0 file_875^M
+< -rw-r--r--         0 file_876^M
+< -rw-r--r--         0 file_877^M
+< -rw-r--r--         0 file_880^M
+< -rw-r--r--         0 file_881^M
+< -rw-r--r--         0 file_882^M
+< -rw-r--r--         0 file_883^M
+< -rw-r--r--         0 file_884^M
+< -rw-r--r--         0 file_885^M
+< -rw-r--r--         0 file_886^M
+< -rw-r--r--         0 file_887^M
+< -rw-r--r--         0 file_890^M
+< -rw-r--r--         0 file_891^M
+< -rw-r--r--         0 file_892^M
+< -rw-r--r--         0 file_893^M
+< -rw-r--r--         0 file_894^M
+< -rw-r--r--         0 file_895^M
+< -rw-r--r--         0 file_896^M
+< -rw-r--r--         0 file_897^M
+< -rw-r--r--         0 file_900^M
+< -rw-r--r--         0 file_901^M
+< -rw-r--r--         0 file_902^M
+< -rw-r--r--         0 file_903^M
+< -rw-r--r--         0 file_904^M
+< -rw-r--r--         0 file_905^M
+< -rw-r--r--         0 file_906^M
+< -rw-r--r--         0 file_907^M
+< -rw-r--r--         0 file_910^M
+< -rw-r--r--         0 file_911^M
+< -rw-r--r--         0 file_912^M
+< -rw-r--r--         0 file_913^M
+< -rw-r--r--         0 file_914^M
+< -rw-r--r--         0 file_915^M
+< -rw-r--r--         0 file_916^M
+< -rw-r--r--         0 file_917^M
+< -rw-r--r--         0 file_920^M
+< -rw-r--r--         0 file_921^M
+< -rw-r--r--         0 file_922^M
+< -rw-r--r--         0 file_923^M
+< -rw-r--r--         0 file_924^M
+< -rw-r--r--         0 file_925^M
+< -rw-r--r--         0 file_926^M
+< -rw-r--r--         0 file_927^M
+< -rw-r--r--         0 file_930^M
+< -rw-r--r--         0 file_931^M
+< -rw-r--r--         0 file_932^M
+< -rw-r--r--         0 file_933^M
+< -rw-r--r--         0 file_934^M
+< -rw-r--r--         0 file_935^M
+< -rw-r--r--         0 file_936^M
+< -rw-r--r--         0 file_937^M
+< -rw-r--r--         0 file_940^M
+< -rw-r--r--         0 file_941^M
+< -rw-r--r--         0 file_942^M
+< -rw-r--r--         0 file_943^M
+< -rw-r--r--         0 file_944^M
+< -rw-r--r--         0 file_945^M
+< -rw-r--r--         0 file_946^M
+< -rw-r--r--         0 file_947^M
+< -rw-r--r--         0 file_950^M
+< -rw-r--r--       113 LastFile^M
+
+
+-----------------
+34) indirect directory (file):
+     minls /home/pn-cs453/Given/Asgn5/Images/BigIndirectDirs Level1/Level2/LastFile 
+-----------------
+Program exited with bad status: 256
+
+Test program output:
+Level1/Level2/LastFile: File not found.^M
+
+
+-----------------
+71) directories:
+     minget /home/pn-cs453/Given/Asgn5/Images/Files /DeepPaths/a/b/c/d/e/i/j/k/Files/Message 
+-----------------
+Program exited with bad status: 256
+
+Test program output:
+/DeepPaths/a/b/c/d/e/i/j/k/Files/Message: Not a regular file.^M
+
+
+-----------------
+75) directories:
+     minget /home/pn-cs453/Given/Asgn5/Images/Files /DeepPaths/a/b/c/d/e/i/j/k/Files/Message /dev/stdout 
+-----------------
+Program exited with bad status: 256
+
+Test program output:
+/DeepPaths/a/b/c/d/e/i/j/k/Files/Message: Not a regular file.^M
+
+
+-----------------
+78) indirect directory (file):
+     minget /home/pn-cs453/Given/Asgn5/Images/BigIndirectDirs Level1/Level2/LastFile 
+-----------------
+Program exited with bad status: 256
+
+Test program output:
+Level1/Level2/LastFile: File not found.^M
+
+
+-----------------
+79) indirect directory (file):
+     minget /home/pn-cs453/Given/Asgn5/Images/BigIndirectDirs Level1/Level2/LastFile /dev/stdout 
+-----------------
+Program exited with bad status: 256
+
+Test program output:
+Level1/Level2/LastFile: File not found.^M
+
+
+-----------------
+96) Files size tests:
+     minget /home/pn-cs453/Given/Asgn5/Images/Files /Files/0010_Zones 
+-----------------
+Test program output:
+ --- Output limited to 10 lines. (There would be too much.) ---
+-4M-bM-))EM-cM-SKM-^@^HM-^\M-sM- yM-C#M-CbM-{M-^W{^BM-d${^M-N8yM-;M-CM-^?M-j1R^DM-ZM-^DJM-3JM-b,_rM-^\^Yp^]M-RNM-vM-^PM-bM-^T\FKM-_;3#GM-^XPM- M-}`M-^FM-rM-4^LM-FM-^NM-!M-^Z^[RM-aM-y^EM-U7M-3M-L^RIM-QM-:M-^Y>aM-hM-{M-sM-^R\^AM-|M-*^?M-QM-/M-XZM-nbTM-3aM-cYErM-IM-_M-BD^N^TdM-e;M-^RqM-!4M-ta^GM-^L]ZdM-3iM-^Yb5B>M-Ht^RM-!X`M-~M-kM-=MM&U)M-^@6uM-VtZM-<:M-^UU^NM-DDVM-^EM-V)^^@M-VM-K^Y0?M-_sHM-3w^?M-^M^QM-j^UnTb<M-AwM-^PM-yM-RM-FM-o^AM-$^WM-->:?M-,M-^PM-1M-GM-=M-%M-[M-&M-AM-{M-LM-3<M-6i^M-&	OM-^CM-"M-SM-xM-Y^\M-R:OM->M-3l0D.KM-BDM-LM-Gh^L*)^_M-lM-sM-:0"3^QUYM-"M-,G*M-TM-]e^DM-e?M-^GM-.M-T^XM-Z^GM-;M-iM-tM-oM-^Hu]^OM-fM-^K M-^\M-^CM-iM-^JM-k|M-^NAiM-_M-^RM-^NM-8^FM-^VM-dM-]l>HM-auM-c{TNM-iM-uM-s_^ZAM-zwM-^@^RM-mM-8;GM-FM-7M-^X6M-%M-^W}^Q^NvJ^C^^F^VLM-Iy>?M-MM-K^HM-~M-^RM-dsM-^GM-^OM-^V#M-D-M-1M-(^SM-^RM- C,^F^]M-+1^DM-9M-^_M-TM-^Ov/@M-GM-r{r",tM-^IM-\M-pM-MM-0M-;bM-=M-w^@Jzc^WM-q@M-zM-U^VM-~M-^GM-^[M-|^NM-^JN^LfV^OM-^MM-kvM-SR!M-GMzM-OM->M-gM-GM-t^\^BlwM-=[M-vM-OM-9M-2M-^_+M-=M-KM-uM-^PM-T^E)jNM-QM-^M-at1M-^\ZqM-FM-(M-(M-^WC^XM-I~M-yM-^PM-lM-^GM-I^AM-QXM-7M-.eM-&M->^A^^M-6:^@J^\M-OM-?M-qM-^MM-^Qu^KM-B*^NM-^VgM-xM-^YM-^?"M-^H^EM-^HM-XAM-L!ZM-jM-^MS>M-QM--Xs'9M-Jzz g^>M-g,gJt^GWp^BxM-!M-v0F(^YM-@\M-SBcM-ooM-&nlQ=M-+M-^S^M-NM-^RM-w\M-_?M- HM-#yM-tM-OM-R?M-'M-k3^SAM-[M-^MM-PrM-;M-+^Th^RM-T`M-^__wM-fM-^JM-l^^S^X;M-}q}M-%M-^QM-^[M-R(^HRM-iO^_D^MM-^E7M-\EbiM-^@^OM-NM-nM-FM-T2M-^K*"O^CM-^Cq^^]D^PVM-^C}M-cM-^ErM-!M-^_M-^BM-GM-^_M-^?M-mM-^SM-xETFNM-^['vM-1M-^GM-^^M-Z2.M-(M-rM-EM-_M- M-i^WRM-^MM-'M-L`M-^HM-hM-Nr6M-^MM-9^Z^F/n8um^^EL	M-yM-jM-b.M-@M-KM-s^RE)M-^Qf]M-rN^GB^KM->TM-\O^KM-{{M-<M-.UWUM-m^Q^\kM-^KM-0M-H!M--M-~M-UM-(M-^]WM-MP;/M-^F[M-^K^HM-q^K\RM-^Z^]M-^HM-lM-M^M-6[^WM-^V\M-SM-4-f	M-yM-)^TM-.M-fM-lM-hM-^Blh%uM-0M-^T^PM-;^@M- ^QM-hM-^GbM-jM--^U,M-^M-"pM-^wM-LM-h1+ ^?M-IDM-$@M-@=M-gmM--.M--M-YM-^NM-*&M-#9M-^VM-^P^AM-yM-t^DM-4M-~M-cvTM-`T^\M-kEM-='^RM-^?M-8^FM-JM-^JpM-^Y.=M-T&KM-z 7M-^M9-M-aM-^PM-,M-RM-aM-hM-^M-^HM-^Es^^Q/4.M-^SM-eM-^Ay^LXQ0M-{cM-^SM-^FRM^_^UM-\[cM-,M-{M-k^AM-^^M-jM-}3+M-xG<AM-^GM-[M-<M-@xM-|M-^N{M-)^M
+M-L^BM-/home/pnico/bin/iolimit.Linux.x86_64: output character limit (2048) exceeded.
+Diffs: ( < Reference > Testfile ):
+ --- Output limited to 10 lines. (There would be too much.) ---
+Binary files /home/pn-cs453/Given/Asgn5/Expected/96 and testminfs.24654 differ
+
+
+-----------------
+97) Files size tests:
+     minget /home/pn-cs453/Given/Asgn5/Images/Files /Files/1032_Zones 
+-----------------
+Test program output:
+ --- Output limited to 10 lines. (There would be too much.) ---
+LM-^B1N,^OM-gM-\M-^V^@M-^^?M-^K^EM-X M-a^[M-"]C^C|RM-UQM-)M-mM-7^WM-^AIoM-*>M-^VmM->^[M-@cM-X.@;M-umlgM-l^_M-^TM-=M-^[M-mM-!SM-=$:M-xM-*M-^?M-%M-67Ln9M-AM-^[^Y96j.yM-^TM-4M-H^SM-^KgM-^G+M-UdM-^^M-r^PM-d6=;`bM-^PM-{M-^ILcM-^O.M-iuM-1jM-^J"M-ITM-^IM-Q^U@M-JM-nM-3M-\M-^?GQ^R^OM-Oqu*M-hk"J#M-2M-^BM-JY^QM-;7WJM-^PM-;M-%M-iM-^OM-^T{M-.M-WzN[JM-{^GM-c2v6x^VrM-^M-#9RM-r:^CM-2M-_ZqVM-c9h{?M-&M-_M-^MM-<M-t7M-^\S^KM-vB^FM-^K^^M-YM-^GgM-^KM-|M-aM-<^MM-^F^DJM- qM-e~lAM-^AM-Q/^RM-wM-^jM-sM- X%^D^AM-0k^ZM-sM-&xTM-MVM-/&M-+'^V@_/q%^RM-MM-GM-C^N5LM-IM-5M-K^AM->M-sM-^U^TkM-ZM-@M-gM-^^M-?^BM-2,V^DVM-3M-w^QM-^Q^W^ZM-I"wlM-^_TM-`M--M-^TXM-^^ZM-^JM-tM-^OjM-^V^QM-^EcM-LM-B^UM-C\^RM-tM-!M-JM-2M-LM-^\M-^QKM-jM-3^?M-^JM-gr	^StI\^_<^M
+M-\`M-JTM-n+$b^SM-^C'M-^@yM-^OM-gM-^HM-^F^UM-<M-x^MM-4M-^?gxXM--}$M-o38^PmgM-bM-^ZM-.M-&M-&M-/pM-^@M-^@M-^J^Ts^M-^AM-4P^MzRM-p>M-wM-^U^GyM-c^QM-XM-(^A	jvM-?M-/pM-~M-^@7)M-^C~M-Y^R\M-^UM-/M-#bM-wM-^QM-`M-^DM-(M-=M-^_"SM-~CM-|M-EM-^IM-7.M-jM--`M-^[M-^XM-^DM-(M-^FM-OM-BZ^PM-~^?M-^RM-tSQIM-2M-^T^_^[M-~TM-W$@|M-^GM-^^^lM-<M-^F^NM-[5M-^\M-RFM-NuM-;M-eM-2M-(M-&M-^?M-UM-^Y&wZ(M-^P^FM-uM-*eM-!M-$^UM-9M-^[N6]M->B^E@=^TM-{M-}M-LM-{M-7hM-DM-TM-^F^NM-r^QM-:M-YM-FpM-]WG|M-KM-^W#M-`TjM-cM-3EhM-^YM-BM-t}M-6M-^T6^HM-^O,M-^Uj|M-W^R5M-)M-:M-TsM-NM-^HM-e1^_M-VM-eM-/M-\M-rvM-YM-/M-?\(M-^Mi^@zM-^]M-n^[OnM-miM-WM-uM-^K^XM-pkM-^H|\^X:	M-6=L^QM-c^M
+M-YM-^D>M-^ M-pvIM-d^]L^?>M-(M-XM-g#XvM-N{M-#^SM-nwM-^O9_M-@M-\M-!M-^\6TM-kM-qM-.M-#5^ZM-$lM-^?M-^H^N42M-)^T^H~=|	l^DM-iM-^KM-o\DM-?M-.M-v|M-Z~M-/pbM-B^HM->JM-*[M-g$M-^JH@M-j^LM-hM-(1^X_M-e M-m3D)M-]~M-^KVF`^OM-JM-&68M-zM-^GM-kyM-^QMM-^\M-dM-YM-{M-: 78EmM-|M-^JM-6@M-[M-JA#c/m,^HM-:^FM->M-I9^ZM-]@M-* M-.M-t	M-^CM-^_M-^U0&M-x	^KM-EzM-J3cM-j07M-a^D^Ffq^L@M-&M-)M-[M-XM-!^^LM-4M-^GM-^L&M-yM-!M-^TM-1M-^GM-@M-B^_^KZ]{^M
+D{M-,M-dM-^ZM-YM-a^AhM-c]@M-/^D:YhM-^JgM-*M-XmM-0M-VJ^ZM-cM-&M-^GM-^\ M-wM-5^:M-{M-1M-hB^TOM-bt^DM-mKM-Ic3M-!SM-^LM-kK^PM-~XS*IM-'FM-y,M-wdM-ZzM-wM-^^eeQyM-PMM-jM-LM-vM-^\M-^JUM-pmLM-^MM-^HM-^KM-|aM-^]TM-SM-'$^H^LM-)$M-LH	cM-$^G+b3^F7M-klM-;M-(DZ^UWM-*fM-^TQK(M-^YM-^]M-3M-^^Ve^T^B/home/pnico/bin/iolimit.Linux.x86_64: output character limit (2048) exceeded.
+Diffs: ( < Reference > Testfile ):
+ --- Output limited to 10 lines. (There would be too much.) ---
+Binary files /home/pn-cs453/Given/Asgn5/Expected/97 and testminfs.24654 differ
+
+
+-----------------
+101) Files size tests:
+     minget /home/pn-cs453/Given/Asgn5/Images/Files /Files/0010_Zones /dev/stdout 
+-----------------
+Test program output:
+ --- Output limited to 10 lines. (There would be too much.) ---
+-4M-bM-))EM-cM-SKM-^@^HM-^\M-sM- yM-C#M-CbM-{M-^W{^BM-d${^M-N8yM-;M-CM-^?M-j1R^DM-ZM-^DJM-3JM-b,_rM-^\^Yp^]M-RNM-vM-^PM-bM-^T\FKM-_;3#GM-^XPM- M-}`M-^FM-rM-4^LM-FM-^NM-!M-^Z^[RM-aM-y^EM-U7M-3M-L^RIM-QM-:M-^Y>aM-hM-{M-sM-^R\^AM-|M-*^?M-QM-/M-XZM-nbTM-3aM-cYErM-IM-_M-BD^N^TdM-e;M-^RqM-!4M-ta^GM-^L]ZdM-3iM-^Yb5B>M-Ht^RM-!X`M-~M-kM-=MM&U)M-^@6uM-VtZM-<:M-^UU^NM-DDVM-^EM-V)^^@M-VM-K^Y0?M-_sHM-3w^?M-^M^QM-j^UnTb<M-AwM-^PM-yM-RM-FM-o^AM-$^WM-->:?M-,M-^PM-1M-GM-=M-%M-[M-&M-AM-{M-LM-3<M-6i^M-&	OM-^CM-"M-SM-xM-Y^\M-R:OM->M-3l0D.KM-BDM-LM-Gh^L*)^_M-lM-sM-:0"3^QUYM-"M-,G*M-TM-]e^DM-e?M-^GM-.M-T^XM-Z^GM-;M-iM-tM-oM-^Hu]^OM-fM-^K M-^\M-^CM-iM-^JM-k|M-^NAiM-_M-^RM-^NM-8^FM-^VM-dM-]l>HM-auM-c{TNM-iM-uM-s_^ZAM-zwM-^@^RM-mM-8;GM-FM-7M-^X6M-%M-^W}^Q^NvJ^C^^F^VLM-Iy>?M-MM-K^HM-~M-^RM-dsM-^GM-^OM-^V#M-D-M-1M-(^SM-^RM- C,^F^]M-+1^DM-9M-^_M-TM-^Ov/@M-GM-r{r",tM-^IM-\M-pM-MM-0M-;bM-=M-w^@Jzc^WM-q@M-zM-U^VM-~M-^GM-^[M-|^NM-^JN^LfV^OM-^MM-kvM-SR!M-GMzM-OM->M-gM-GM-t^\^BlwM-=[M-vM-OM-9M-2M-^_+M-=M-KM-uM-^PM-T^E)jNM-QM-^M-at1M-^\ZqM-FM-(M-(M-^WC^XM-I~M-yM-^PM-lM-^GM-I^AM-QXM-7M-.eM-&M->^A^^M-6:^@J^\M-OM-?M-qM-^MM-^Qu^KM-B*^NM-^VgM-xM-^YM-^?"M-^H^EM-^HM-XAM-L!ZM-jM-^MS>M-QM--Xs'9M-Jzz g^>M-g,gJt^GWp^BxM-!M-v0F(^YM-@\M-SBcM-ooM-&nlQ=M-+M-^S^M-NM-^RM-w\M-_?M- HM-#yM-tM-OM-R?M-'M-k3^SAM-[M-^MM-PrM-;M-+^Th^RM-T`M-^__wM-fM-^JM-l^^S^X;M-}q}M-%M-^QM-^[M-R(^HRM-iO^_D^MM-^E7M-\EbiM-^@^OM-NM-nM-FM-T2M-^K*"O^CM-^Cq^^]D^PVM-^C}M-cM-^ErM-!M-^_M-^BM-GM-^_M-^?M-mM-^SM-xETFNM-^['vM-1M-^GM-^^M-Z2.M-(M-rM-EM-_M- M-i^WRM-^MM-'M-L`M-^HM-hM-Nr6M-^MM-9^Z^F/n8um^^EL	M-yM-jM-b.M-@M-KM-s^RE)M-^Qf]M-rN^GB^KM->TM-\O^KM-{{M-<M-.UWUM-m^Q^\kM-^KM-0M-H!M--M-~M-UM-(M-^]WM-MP;/M-^F[M-^K^HM-q^K\RM-^Z^]M-^HM-lM-M^M-6[^WM-^V\M-SM-4-f	M-yM-)^TM-.M-fM-lM-hM-^Blh%uM-0M-^T^PM-;^@M- ^QM-hM-^GbM-jM--^U,M-^M-"pM-^wM-LM-h1+ ^?M-IDM-$@M-@=M-gmM--.M--M-YM-^NM-*&M-#9M-^VM-^P^AM-yM-t^DM-4M-~M-cvTM-`T^\M-kEM-='^RM-^?M-8^FM-JM-^JpM-^Y.=M-T&KM-z 7M-^M9-M-aM-^PM-,M-RM-aM-hM-^M-^HM-^Es^^Q/4.M-^SM-eM-^Ay^LXQ0M-{cM-^SM-^FRM^_^UM-\[cM-,M-{M-k^AM-^^M-jM-}3+M-xG<AM-^GM-[M-<M-@xM-|M-^N{M-)^M
+M-L^BM-/home/pnico/bin/iolimit.Linux.x86_64: output character limit (2048) exceeded.
+Diffs: ( < Reference > Testfile ):
+ --- Output limited to 10 lines. (There would be too much.) ---
+Binary files /home/pn-cs453/Given/Asgn5/Expected/101 and testminfs.24654 differ
+
+
+-----------------
+102) Files size tests:
+     minget /home/pn-cs453/Given/Asgn5/Images/Files /Files/1032_Zones /dev/stdout 
+-----------------
+Test program output:
+ --- Output limited to 10 lines. (There would be too much.) ---
+LM-^B1N,^OM-gM-\M-^V^@M-^^?M-^K^EM-X M-a^[M-"]C^C|RM-UQM-)M-mM-7^WM-^AIoM-*>M-^VmM->^[M-@cM-X.@;M-umlgM-l^_M-^TM-=M-^[M-mM-!SM-=$:M-xM-*M-^?M-%M-67Ln9M-AM-^[^Y96j.yM-^TM-4M-H^SM-^KgM-^G+M-UdM-^^M-r^PM-d6=;`bM-^PM-{M-^ILcM-^O.M-iuM-1jM-^J"M-ITM-^IM-Q^U@M-JM-nM-3M-\M-^?GQ^R^OM-Oqu*M-hk"J#M-2M-^BM-JY^QM-;7WJM-^PM-;M-%M-iM-^OM-^T{M-.M-WzN[JM-{^GM-c2v6x^VrM-^M-#9RM-r:^CM-2M-_ZqVM-c9h{?M-&M-_M-^MM-<M-t7M-^\S^KM-vB^FM-^K^^M-YM-^GgM-^KM-|M-aM-<^MM-^F^DJM- qM-e~lAM-^AM-Q/^RM-wM-^jM-sM- X%^D^AM-0k^ZM-sM-&xTM-MVM-/&M-+'^V@_/q%^RM-MM-GM-C^N5LM-IM-5M-K^AM->M-sM-^U^TkM-ZM-@M-gM-^^M-?^BM-2,V^DVM-3M-w^QM-^Q^W^ZM-I"wlM-^_TM-`M--M-^TXM-^^ZM-^JM-tM-^OjM-^V^QM-^EcM-LM-B^UM-C\^RM-tM-!M-JM-2M-LM-^\M-^QKM-jM-3^?M-^JM-gr	^StI\^_<^M
+M-\`M-JTM-n+$b^SM-^C'M-^@yM-^OM-gM-^HM-^F^UM-<M-x^MM-4M-^?gxXM--}$M-o38^PmgM-bM-^ZM-.M-&M-&M-/pM-^@M-^@M-^J^Ts^M-^AM-4P^MzRM-p>M-wM-^U^GyM-c^QM-XM-(^A	jvM-?M-/pM-~M-^@7)M-^C~M-Y^R\M-^UM-/M-#bM-wM-^QM-`M-^DM-(M-=M-^_"SM-~CM-|M-EM-^IM-7.M-jM--`M-^[M-^XM-^DM-(M-^FM-OM-BZ^PM-~^?M-^RM-tSQIM-2M-^T^_^[M-~TM-W$@|M-^GM-^^^lM-<M-^F^NM-[5M-^\M-RFM-NuM-;M-eM-2M-(M-&M-^?M-UM-^Y&wZ(M-^P^FM-uM-*eM-!M-$^UM-9M-^[N6]M->B^E@=^TM-{M-}M-LM-{M-7hM-DM-TM-^F^NM-r^QM-:M-YM-FpM-]WG|M-KM-^W#M-`TjM-cM-3EhM-^YM-BM-t}M-6M-^T6^HM-^O,M-^Uj|M-W^R5M-)M-:M-TsM-NM-^HM-e1^_M-VM-eM-/M-\M-rvM-YM-/M-?\(M-^Mi^@zM-^]M-n^[OnM-miM-WM-uM-^K^XM-pkM-^H|\^X:	M-6=L^QM-c^M
+M-YM-^D>M-^ M-pvIM-d^]L^?>M-(M-XM-g#XvM-N{M-#^SM-nwM-^O9_M-@M-\M-!M-^\6TM-kM-qM-.M-#5^ZM-$lM-^?M-^H^N42M-)^T^H~=|	l^DM-iM-^KM-o\DM-?M-.M-v|M-Z~M-/pbM-B^HM->JM-*[M-g$M-^JH@M-j^LM-hM-(1^X_M-e M-m3D)M-]~M-^KVF`^OM-JM-&68M-zM-^GM-kyM-^QMM-^\M-dM-YM-{M-: 78EmM-|M-^JM-6@M-[M-JA#c/m,^HM-:^FM->M-I9^ZM-]@M-* M-.M-t	M-^CM-^_M-^U0&M-x	^KM-EzM-J3cM-j07M-a^D^Ffq^L@M-&M-)M-[M-XM-!^^LM-4M-^GM-^L&M-yM-!M-^TM-1M-^GM-@M-B^_^KZ]{^M
+D{M-,M-dM-^ZM-YM-a^AhM-c]@M-/^D:YhM-^JgM-*M-XmM-0M-VJ^ZM-cM-&M-^GM-^\ M-wM-5^:M-{M-1M-hB^TOM-bt^DM-mKM-Ic3M-!SM-^LM-kK^PM-~XS*IM-'FM-y,M-wdM-ZzM-wM-^^eeQyM-PMM-jM-LM-vM-^\M-^JUM-pmLM-^MM-^HM-^KM-|aM-^]TM-SM-'$^H^LM-)$M-LH	cM-$^G+b3^F7M-klM-;M-(DZ^UWM-*fM-^TQK(M-^YM-^]M-3M-^^Ve^T^B/home/pnico/bin/iolimit.Linux.x86_64: output character limit (2048) exceeded.
+Diffs: ( < Reference > Testfile ):
+ --- Output limited to 10 lines. (There would be too much.) ---
+Binary files /home/pn-cs453/Given/Asgn5/Expected/102 and testminfs.24654 differ
+
+
+-----------------
+105) Reading files with holes:
+     minget /home/pn-cs453/Given/Asgn5/Images/Files /Holes/into-indirect  /dev/stdout 
+-----------------
+Test program output:
+ --- Output limited to 10 lines. (There would be too much.) ---
+Before the hole.^M
+^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^/home/pnico/bin/iolimit.Linux.x86_64: output character limit (2048) exceeded.
+Diffs: ( < Reference > Testfile ):
+ --- Output limited to 10 lines. (There would be too much.) ---
+Binary files /home/pn-cs453/Given/Asgn5/Expected/105 and testminfs.24654 differ
+
+
+-----------------
+106) Reading files with holes:
+     minget /home/pn-cs453/Given/Asgn5/Images/Files /Holes/whole-indirect /dev/stdout 
+-----------------
+Test program output:

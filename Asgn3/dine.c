@@ -1,0 +1,255 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <semaphore.h>
+#include <errno.h>
+#include <unistd.h>
+#include <string.h>
+#include <time.h>
+#include <limits.h>
+
+#ifndef NUM_PHILOSOPHERS
+#define NUM_PHILOSOPHERS 5
+#endif
+#define LIFE 1
+#define CHANGE 1
+#define EAT 2
+#define THINK 3
+#define FULL 4
+
+
+typedef struct{
+   int life;
+   int status;
+   char name;
+   int left;
+   int right;
+}stats_t;
+
+typedef struct{
+   stats_t *status;
+   int position;
+
+   sem_t *forks;
+   sem_t *print;
+   sem_t *waitprint;
+} behavior_t;
+
+void *philo(void *behavior);
+void print_status(sem_t *print,stats_t *stats);
+
+void init_semaphores(sem_t *print, sem_t *forks){
+   int i;
+   /* initialize all semaphores for each forks */
+   for(i = 0; i < NUM_PHILOSOPHERS;i++){
+      sem_init(&forks[i],0,1);
+   }
+   /* mutex should be used for printing ?*/
+   sem_init(print, 0, 1);
+}
+void init_stats(stats_t *status,int life){
+   int i; 
+   for( i = 0; i < NUM_PHILOSOPHERS;i++){
+      status[i].status = CHANGE;
+      status[i].name = i + 65;
+      status[i].left = 0;
+      status[i].right = 0;
+      status[i].life = life;
+   }      
+}
+
+void run_threads(stats_t *status, pthread_t *threads, sem_t *forks,
+                 sem_t *print){
+   int i; 
+   int res;
+   print_status(print,status);
+   for( i = 0; i < NUM_PHILOSOPHERS; i++){
+      /* sets the specific behavior for each childs 
+       * with array of the forks*/
+      behavior_t *args = malloc(sizeof(behavior_t));
+      if(!args){
+         perror(NULL);
+         exit(EXIT_FAILURE);
+      }
+      args->status = status;
+      args->position = i;
+      args->print = print;
+      args->forks = forks;
+  
+      res = pthread_create(&threads[i],NULL,philo,(void *) args);
+      if( -1 == res){
+         fprintf(stderr,"Child %i: %s\n",i,strerror(errno));
+         exit(EXIT_FAILURE);
+      }
+   }
+}
+
+void print_status(sem_t *print, stats_t* stats){
+   int i,j;
+
+   sem_wait(print);
+   for(i = 0; i < NUM_PHILOSOPHERS;i++){
+      printf("|");
+      for(j = 0; j < NUM_PHILOSOPHERS;j++){
+         if((j == i) && stats[i].left == 1)
+            printf("%d",j);
+         else if((j == (i+1) % NUM_PHILOSOPHERS) && stats[i].right == 1)
+            printf("%d",j);
+         else
+            printf("-");
+      }
+      printf(" ");
+      if(stats[i].status == CHANGE){
+         printf("       ");
+      }
+      else if(stats[i].status == EAT){
+         printf("Eat    ");
+      }
+      else if(stats[i].status == THINK){
+         printf("Think  ");
+      }
+      else if(stats[i].status == FULL){
+         printf("       ");
+      }
+      else 
+         printf("%d",stats[i].status);
+   }
+   printf("|\n");
+   sem_post(print);
+}
+
+void dawdle(){
+   struct timespec tv;
+   int msec = (int)(((double)random() / RAND_MAX) * 1000);
+   tv.tv_sec = 0;
+   tv.tv_nsec = 1000000 * msec;
+   if(nanosleep(&tv,NULL) == -1) {
+      perror("nanosleep"); 
+   }
+}
+
+
+void* philo(void * behavior){
+   int i;
+   behavior_t self = *(behavior_t *)behavior;
+
+   for(i = 0; i < self.status[self.position].life;i++){
+
+      /* the odd philo pick left first, and vice versa */
+         
+      if(self.position % 2 == 1){
+         sem_wait(&self.forks[self.position]);
+         self.status[self.position].left = 1;
+         print_status(self.print,self.status);
+         
+         sem_wait(&self.forks[(self.position + 1) % NUM_PHILOSOPHERS]);
+         self.status[self.position].right = 1;
+         print_status(self.print,self.status);
+      }
+      else if(self.position % 2 == 0){
+         sem_wait(&self.forks[(self.position + 1) % NUM_PHILOSOPHERS]);
+         self.status[self.position].right = 1;
+         print_status(self.print,self.status);
+
+         sem_wait(&self.forks[self.position]);
+         self.status[self.position].left = 1;
+         print_status(self.print,self.status);   
+      }
+      
+      self.status[self.position].status = EAT;
+      dawdle();
+      print_status(self.print,self.status);
+      
+      /* return the fork to the table.. */
+      self.status[self.position].status = CHANGE;
+      print_status(self.print,self.status);
+
+      self.status[self.position].left = 0;
+      sem_post(&self.forks[self.position]);
+      print_status(self.print,self.status);
+
+      self.status[self.position].right = 0;
+      sem_post(&self.forks[(self.position + 1) % NUM_PHILOSOPHERS]);
+      print_status(self.print,self.status);
+
+      self.status[self.position].status = THINK;
+      dawdle();
+      print_status(self.print,self.status);
+   
+      self.status[self.position].status = CHANGE;
+      print_status(self.print,self.status);
+   }
+
+   self.status[self.position].status = FULL;
+   print_status(self.print,self.status);
+   pthread_exit(NULL);
+}
+
+void print_header(void)
+{
+   int i,j;
+   /* print header */
+   for(i = 0; i < NUM_PHILOSOPHERS;i++){
+      printf("|");
+      for(j = 0; j < NUM_PHILOSOPHERS;j++){
+         printf("=");
+      }
+      printf("========");
+   }
+   printf("|\n");
+   for(i = 0; i < NUM_PHILOSOPHERS;i++){
+      printf("| ");
+      for(j = 0;j < NUM_PHILOSOPHERS;j++){
+         printf(" ");
+      }
+      printf("%c      ",i + 65);
+   }
+   printf("|\n");
+   for(i = 0; i < NUM_PHILOSOPHERS;i++){
+      printf("|");
+      for(j = 0; j < NUM_PHILOSOPHERS;j++){
+         printf("=");
+      }
+      printf("========");
+   }
+   printf("|\n");
+}
+
+void print_end(){
+   int i,j;
+   for(i = 0; i < NUM_PHILOSOPHERS;i++){
+      printf("|");
+      for(j = 0; j < NUM_PHILOSOPHERS;j++){
+         printf("=");
+      }
+      printf("========");
+   }
+   printf("|\n");
+}
+
+void wait_thread(pthread_t *philo){
+   int i;
+   for(i = 0; i < NUM_PHILOSOPHERS;i++){
+      pthread_join(philo[i],NULL);
+   }
+   print_end();
+}
+
+
+int main(int argc, char *argv[]){
+   sem_t print;
+   sem_t forks[NUM_PHILOSOPHERS];
+   int life = LIFE;
+
+   pthread_t philosophers[NUM_PHILOSOPHERS];
+   stats_t status[NUM_PHILOSOPHERS];
+   if(argc == 2){
+      life = atoi(argv[1]);
+   }
+   init_semaphores(&print,forks);
+   print_header();
+   init_stats(status,life);
+   run_threads(status, philosophers, forks, &print);
+   wait_thread(philosophers);
+   pthread_exit(NULL);
+}
